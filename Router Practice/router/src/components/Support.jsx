@@ -1,0 +1,25 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+
+const Support = () => {
+  const navigate = useNavigate();
+  function backHandler() {
+    navigate(-1);
+  }
+  return (
+    <div>
+      <div>Support Page</div>
+      <button
+        onClick={backHandler}
+        className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-indigo-600"
+      >
+        <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-indigo-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+        <span class="relative text-indigo-600 transition duration-300 group-hover:text-white ease">
+          Go Back
+        </span>
+      </button>
+    </div>
+  );
+};
+
+export default Support;
